@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+li {
+  list-style: circle;
+  color: red;
+  background-color: rgba(243, 237, 243, 0.937);
+}

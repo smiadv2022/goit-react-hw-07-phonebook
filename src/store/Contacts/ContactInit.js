@@ -1,6 +1,21 @@
-export const contactsInitialState = [
-  { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-  { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-  { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-  { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
-];
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://64a91b1e8b9afaf4844a4038.mockapi.io/Api';
+
+export const fetchContact = async () => {
+  try {
+    const response = await axios.get('/phonebook').then();
+
+    const contactsInitialState = response.data;
+
+    return contactsInitialState;
+  } catch (error) {
+    return error.message;
+  }
+};
+
+export const contactsInitialState = {
+  contacts: [],
+  isLoading: false,
+  error: null,
+};

@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+
 import { Form, InputContact, Label, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'store/Contacts/ContactSlice';
+
 import { Section } from 'components/App/App.styled';
 import { useNavigate } from 'react-router-dom';
 import { getContactSelector } from 'store/Selector';
+import { addContact } from 'store/Operations';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const contacts = useSelector(getContactSelector);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const contacts = useSelector(getContactSelector);
+
   const handleSubmit = e => {
     e.preventDefault();
     if (
@@ -24,8 +27,8 @@ export const ContactForm = () => {
       alert(`${name} is already in contacts.`);
       return;
     }
-
-    dispatch(addContact(name, number));
+    const phone = number;
+    dispatch(addContact({ name, phone }));
 
     setName('');
     setNumber('');

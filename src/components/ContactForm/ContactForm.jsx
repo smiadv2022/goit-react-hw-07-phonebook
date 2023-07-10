@@ -18,7 +18,7 @@ import { getContactSelector } from 'store/Selector';
 // import { modalClose } from '.';
 import { Title } from 'components/ContactList/ContactList.styled';
 import { modalClose } from 'store/Modal/modalsSlice';
-import { addContact } from 'store/operations';
+import { addContact } from 'store/Operations';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');

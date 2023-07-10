@@ -14,7 +14,7 @@ import {
   getFilterSelector,
   getModalSelector,
 } from 'store/Selector.js';
-import { deleteContact, fetchContacts } from 'store/operations.js';
+import { deleteContact, fetchContacts } from 'store/Operations.js';
 import { useEffect } from 'react';
 
 import { ContactForm } from 'components/ContactForm/ContactForm.jsx';

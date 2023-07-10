@@ -10,7 +10,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<ContactList />} />
-        <Route path="ContactForm" element={<ContactForm />} />
+        {/* <Route path="ContactForm" element={<ContactForm />} /> */}
 
         {/* <Route path="*" element={<div> Nothing found </div>} /> */}
         <Route path="*" element={<Navigate to="/" />} />

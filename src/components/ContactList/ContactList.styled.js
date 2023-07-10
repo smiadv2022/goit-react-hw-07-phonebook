@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -69,4 +70,44 @@ export const Title = styled.h2`
   line-height: 2rem;
   font-weight: 600;
   letter-spacing: -0.025em;
+`;
+export const ModalBtn = styled.button`
+  display: flex;
+  padding: 3px;
+
+  background: rgba(0, 0, 281, 0.7);
+
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+  /* margin-left: auto; */
+  border-radius: 30px;
+  border-color: blue;
+
+  :hover {
+    background-color: rgba(181, 275, 281, 0.3);
+    color: black;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.28) 0px 0px 0px 1px;
+  }
+`;
+export const SectionBtn = styled.div`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  padding: 10px;
+  font-size: 1.4rem;
+
+  line-height: 1rem;
+  border: 1px solid lightgray;
+
+  color: blue;
+  border-radius: 10px;
 `;

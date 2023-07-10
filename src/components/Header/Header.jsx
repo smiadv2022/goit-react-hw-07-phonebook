@@ -9,7 +9,7 @@ const Header = () => {
           ContactLists
         </NavLinkStyled>
 
-        <NavLinkStyled to="/ContactForm">AddContact</NavLinkStyled>
+        {/* <NavLinkStyled to="/ContactForm">AddContact</NavLinkStyled> */}
       </HeaderWrapper>
     </HeaderBlock>
   );

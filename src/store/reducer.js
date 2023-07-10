@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+
+import { modalReducer } from './Modal/modalSlice';
 import { contactsReducer } from './Contacts/contactSlice';
 import { filterReducer } from './Filter/filterSlice';
-import { modalReducer } from './Modal/modalSlice';
 
 export const reducer = combineReducers({
   contacts: contactsReducer,

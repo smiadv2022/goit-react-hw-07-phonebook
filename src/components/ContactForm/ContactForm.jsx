@@ -24,7 +24,7 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handlerEscapeClick = e => {
-    console.log('e.code', e.code);
+    // console.log('e.code', e.code);
     if (e.code === 'Escape') {
       dispatch(modalClose());
     }

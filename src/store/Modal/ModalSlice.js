@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { initialModal } from './initialModal';
 
 const modalSlice = createSlice({
-  name: 'isModal',
+  name: 'modal',
   initialState: initialModal,
   reducers: {
     modalOpen(state, action) {

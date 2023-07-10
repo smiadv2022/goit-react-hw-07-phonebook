@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { contactsInitialState } from './ContactInit';
-import { addContact, deleteContact, fetchContacts } from 'store/Operations';
+import { contactsInitialState } from './contactInit';
+import { addContact, deleteContact, fetchContacts } from 'store/operations';
 
 const handlePending = state => {
   state.isLoading = true;

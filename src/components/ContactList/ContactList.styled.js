@@ -41,6 +41,8 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 10px;
   font-size: 1.4rem;
+  width: 1000px;
+  margin: 0 auto;
 
   border: 2px solid rgba(33, 33, 33, 0.2);
   padding: 10px;
@@ -103,10 +105,10 @@ export const SectionBtn = styled.div`
   align-items: center;
 
   padding: 10px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 
   line-height: 1rem;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
 
   color: blue;
   border-radius: 10px;

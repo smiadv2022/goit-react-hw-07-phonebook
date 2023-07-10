@@ -14,25 +14,25 @@ import {
   getFilterSelector,
   getModalSelector,
 } from 'store/Selector.js';
-import { deleteContact, fetchContacts } from 'store/Operations.js';
+import { deleteContact, fetchContacts } from 'store/operations.js';
 import { useEffect } from 'react';
-// import { openModal } from 'store/Modal/ModalSlice.js';
+
 import { ContactForm } from 'components/ContactForm/ContactForm.jsx';
-import { modalOpen } from 'store/Modal/ModalSlice.js';
+import { modalOpen } from 'store/Modal/modalSlice.js';
+import { Loader } from 'components/Loader/Loader.jsx';
 
 export const ContactList = () => {
   const filter = useSelector(getFilterSelector);
   const isOpenModal = useSelector(getModalSelector);
-  console.log('isOpenModal', isOpenModal);
-
+  const isLoading = useSelector(state => state.contacts.isLoading);
+  console.log(isLoading);
   const dispatch = useDispatch();
-  // const { isModal } = useSelector(state => state.modal);
+
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
   const contacts = useSelector(getContactSelector);
-  console.log('contacts', contacts);
 
   const filterContact = () => {
     return contacts.filter(contact =>
@@ -47,23 +47,27 @@ export const ContactList = () => {
   return (
     <>
       <Section>
-        <Title>Phonebook</Title>
-        <SectionBtn>
-          Add contact:
-          <ModalBtn
-            type="submit"
-            aria-label="add contact"
-            onClick={() => dispatch(modalOpen('111'))}
-          >
-            <ImUserPlus />
-          </ModalBtn>
-        </SectionBtn>
-        {isOpenModal && <ContactForm />}
-        <Filter></Filter>
+        <List>
+          {/* <Title>Phonebook</Title> */}
+          <SectionBtn>
+            Add contact:
+            <ModalBtn
+              type="submit"
+              aria-label="add contact"
+              onClick={() => dispatch(modalOpen())}
+            >
+              <ImUserPlus />
+            </ModalBtn>
+          </SectionBtn>
+          {isLoading && <Loader />}
+          {isOpenModal && <ContactForm />}
+          <Filter></Filter>
+        </List>
       </Section>
       <Section>
         <List>
           <Title>ContactList</Title>
+
           {filterContact().map(contact => (
             <Item key={contact.id}>
               {contact.name}: {contact.phone}

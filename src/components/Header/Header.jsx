@@ -6,7 +6,7 @@ const Header = () => {
     <HeaderBlock>
       <HeaderWrapper>
         <NavLinkStyled aria-current="page" to="/">
-          ContactLists
+          PHONEBOOK
         </NavLinkStyled>
 
         {/* <NavLinkStyled to="/ContactForm">AddContact</NavLinkStyled> */}

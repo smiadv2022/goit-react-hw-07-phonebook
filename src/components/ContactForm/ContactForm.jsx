@@ -12,37 +12,25 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Section } from 'components/App/App.styled';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { getContactSelector } from 'store/Selector';
-import { addContact } from 'store/Operations';
-import { modalClose } from 'store/Modal/ModalSlice';
+import { addContact } from 'store/operations';
+import { modalClose } from 'store/Modal/modalSlice';
 import { Title } from 'components/ContactList/ContactList.styled';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
-  // const handlerEscapeClick = e => {
-  //   console.log('e.code', e.code);
-  //   if (e.code === 'Escape') {
-  //     dispatch(modalClose());
-  //   }
-  //     return window.removeEventListener('keydown', handlerEscapeClick);
-  // };
-  // window.addEventListener('keydown', handlerEscapeClick);
 
-  // // useEffect(() => {
-  //   const handlerEscapeClick = e => {
-  //     console.log('e.code', e.code);
-  //     if (e.code === 'Escape') {
-  //       dispatch(modalClose());
-  //     }
-  //   };
-
-  //   return window.removeEventListener('keydown', handlerEscapeClick);
-  // }, [dispatch]);
-
-  const navigate = useNavigate();
+  const handlerEscapeClick = e => {
+    console.log('e.code', e.code);
+    if (e.code === 'Escape') {
+      dispatch(modalClose());
+    }
+    return window.removeEventListener('keydown', handlerEscapeClick);
+  };
+  window.addEventListener('keydown', handlerEscapeClick);
 
   const contacts = useSelector(getContactSelector);
 
@@ -74,7 +62,7 @@ export const ContactForm = () => {
     dispatch(modalClose());
     setName('');
     setNumber('');
-    navigate('/', { replace: true });
+    // navigate('/', { replace: true });
   };
 
   const handleChange = e => {

@@ -22,13 +22,14 @@ export const Section = styled.div`
   // align-items: center;
   flex-direction: column;
   gap: 10px;
-  border: 2px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(33, 33, 33, 0.1);
   padding: 10px;
-  width: 1200px;
+  /* width: 1200px; */
+
   margin: 0px;
   /* padding: 20px; */
   background-color: rgba(181, 175, 181, 0.5);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin-right: auto;
   margin-left: auto;
 `;

@@ -25,7 +25,7 @@ export const ContactList = () => {
   const filter = useSelector(getFilterSelector);
   const isOpenModal = useSelector(getModalSelector);
   const isLoading = useSelector(state => state.contacts.isLoading);
-  console.log(isLoading);
+  // console.log(isLoading);
   const dispatch = useDispatch();
 
   useEffect(() => {

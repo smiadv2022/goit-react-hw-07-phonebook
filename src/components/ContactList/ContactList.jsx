@@ -18,8 +18,9 @@ import { deleteContact, fetchContacts } from 'store/operations.js';
 import { useEffect } from 'react';
 
 import { ContactForm } from 'components/ContactForm/ContactForm.jsx';
-import { modalOpen } from 'store/modal/modalSlice.js';
+// import { modalOpen } from 'store/Modal/ModalSlice.js';
 import { Loader } from 'components/Loader/Loader.jsx';
+import { modalOpen } from 'store/Modal/modalsSlice.js';
 
 export const ContactList = () => {
   const filter = useSelector(getFilterSelector);

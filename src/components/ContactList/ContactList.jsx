@@ -18,7 +18,7 @@ import { deleteContact, fetchContacts } from 'store/operations.js';
 import { useEffect } from 'react';
 
 import { ContactForm } from 'components/ContactForm/ContactForm.jsx';
-import { modalOpen } from 'store/Modal/modalSlice.js';
+import { modalOpen } from 'store/modal/modalSlice.js';
 import { Loader } from 'components/Loader/Loader.jsx';
 
 export const ContactList = () => {

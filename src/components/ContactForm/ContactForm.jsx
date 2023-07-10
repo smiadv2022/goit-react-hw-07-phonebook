@@ -15,7 +15,7 @@ import { Section } from 'components/App/App.styled';
 // import { useNavigate } from 'react-router-dom';
 import { getContactSelector } from 'store/Selector';
 import { addContact } from 'store/operations';
-import { modalClose } from 'store/Modal/modalSlice';
+import { modalClose } from 'store/modal/modalSlice';
 import { Title } from 'components/ContactList/ContactList.styled';
 
 export const ContactForm = () => {
